@@ -1,0 +1,171 @@
+:root {
+    --scale-big: 1.6;
+}
+
+.inner-breathing-circle-backgound {
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    background-color: theme("colors.golden-tan");
+}
+
+.breathing-circle {
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    animation: breathing 8s ease-in-out infinite;
+}
+
+.inner-breathing-circle {
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    border-width: 32px;
+    border-color: theme("colors.dusky-pink");
+}
+
+.inner-breathing-circle:first-of-type {
+    animation: breathing-inner 8s ease-in-out infinite;
+    animation-delay: 0;
+}
+
+.inner-breathing-circle:nth-of-type(2) {
+    animation: breathing-inner 8s ease-in-out infinite;
+    animation-delay: 0.6s;
+}
+
+span#breathing-text {
+    color: theme("colors.soft-gold");
+    font-size: 1.8rem;
+    font-style: italic;
+    text-decoration-line: underline;
+    text-shadow: 0px 1px 6px #000;
+    font-weight: bold;
+    text-underline-offset: 12px;
+}
+
+
+span#breathing-text-mobile {
+    color: theme("colors.soft-gold");
+    font-size: 1.6rem;
+    font-style: italic;
+    text-decoration-line: underline;
+    text-shadow: 0px 1px 6px #000;
+    font-weight: bold;
+    text-underline-offset: 12px;
+}
+
+.breathing-circle-mobile {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    animation: breathing-mobile 8s ease-in-out infinite;
+}
+
+.inner-breathing-circle-mobile {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    border-width: 24px;
+    border-color: theme("colors.dusky-pink");
+}
+
+.inner-breathing-circle-mobile:first-of-type {
+    animation: breathing-inner-mobile 8s ease-in-out infinite;
+    animation-delay: 0;
+}
+
+.inner-breathing-circle-mobile:nth-of-type(2) {
+    animation: breathing-inner-mobile 8s ease-in-out infinite;
+    animation-delay: 0.6s;
+}
+
+@keyframes breathing {
+    0%, 15% {
+        transform: scale(1);
+        border-width: 100px;
+        border-color: theme("colors.dusky-pink");
+    }
+    45% {
+        transform: scale(var(--scale-big));
+        border-color: theme("colors.muted-blood-red");
+    }
+    70% {
+        transform: scale(var(--scale-big));
+        border-width: 32px;
+        border-color: theme("colors.muted-blood-red");
+    }
+    100% {
+        transform: scale(1);
+        border-width: 100px;
+        border-color: theme("colors.dusky-pink");
+    }
+}
+
+@keyframes breathing-inner {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(var(--scale-big));
+        opacity: 1;
+    }
+    70% {
+        transform: scale(var(--scale-big));
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+@keyframes breathing-mobile {
+    0%, 15% {
+        transform: scale(1);
+        border-width: 50px;
+        border-color: theme("colors.dusky-pink");
+    }
+    45% {
+        transform: scale(var(--scale-big));
+        border-color: theme("colors.muted-blood-red");
+    }
+    70% {
+        transform: scale(var(--scale-big));
+        border-width: 24px;
+        border-color: theme("colors.muted-blood-red");
+    }
+    100% {
+        transform: scale(1);
+        border-width: 50px;
+        border-color: theme("colors.dusky-pink");
+    }
+}
+
+@keyframes breathing-inner-mobile {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(var(--scale-big));
+        opacity: 1;
+    }
+    70% {
+        transform: scale(var(--scale-big));
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}

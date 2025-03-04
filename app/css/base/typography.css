@@ -1,0 +1,82 @@
+nav {
+    ul li {
+        font-weight: bold;
+        font-size: 18px;
+
+        a {
+            /* color: theme("colors.soft-cream"); */
+            color: theme("colors.muted-sand");
+            /* text-shadow: 1px 1px 3px black; */
+            text-shadow: 3px 2px 1px theme("colors.deeper-brown");
+            font-size: 28px;
+            font-family: "Roboto Condensed", sans-serif;
+            transition: .6s;
+        }
+
+        a:hover {
+            color: theme("colors.deeper-brown");
+            /* text-shadow: 3px 2px 1px theme("colors.muted-sand"); */
+            text-shadow: none;
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+p,
+li,
+figcaption {
+    text-wrap: pretty;
+    font-size: 20px;
+}
+
+:not(.me-page) p:not(.full-ch),
+p:not(.text-black),
+li {
+    max-width: 65ch;
+    color: theme("colors.deeper-brown");
+    font-size: 20px;
+}
+
+
+.me-page p:not(.full-ch),
+.me-page li {
+    font-size: 16px;
+}
+
+.text-black {
+    color: black !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: clamp(28px, 3vw, 50px) !important;
+    text-underline-offset: 10px;
+    color: theme("colors.golden-tan");
+}
+
+h1 {
+    font-size: clamp(32px, 3vw, 60px) !important;
+}
+
+h2 {
+    font-size: clamp(28px, 3vw, 50px) !important;
+}
+
+h3 {
+    font-size: clamp(24px, 3vw, 40px) !important;
+}
+
+h4 {
+    font-size: clamp(20px, 3vw, 30px) !important;
+}

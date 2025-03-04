@@ -1,0 +1,7 @@
+.content-box {
+    border-radius: 50px;
+    border-color: theme("colors.golden-tan");
+    border-width: 6px;
+    background: rgba(239, 232, 220, 1);
+    max-width: 600px;
+}
